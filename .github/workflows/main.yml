@@ -37,9 +37,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with: 
          host: ${{ secrets.HOST }}
-         username: ${{ secret.USERNAME}}
-         password: ${{ secret.PASSWORD}}
-         port: ${{ secret.PORT }}
+         username: ${{ secrets.USERNAME}}
+         password: ${{ secrets.PASSWORD}}
+         port: ${{ secrets.PORT }}
          script: |
           eval "$(ssh-agent-s)"
           ssh-add ~/.ssh/ssh-praktikan42
